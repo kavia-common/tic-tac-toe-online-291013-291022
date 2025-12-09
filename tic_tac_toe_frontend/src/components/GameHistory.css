@@ -1,0 +1,146 @@
+.game-history {
+  max-width: 600px;
+  margin: 32px auto;
+  padding: 0 20px;
+}
+
+.game-history h2 {
+  color: var(--text, #111827);
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.no-history {
+  text-align: center;
+  color: var(--text, #111827);
+  opacity: 0.6;
+  padding: 24px;
+  background: var(--surface, #ffffff);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 4px;
+}
+
+.history-item {
+  background: var(--surface, #ffffff);
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  border-left: 4px solid var(--primary, #2563EB);
+}
+
+.history-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: translateX(4px);
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.game-number {
+  font-weight: 700;
+  color: var(--primary, #2563EB);
+  font-size: 1rem;
+}
+
+.game-date {
+  font-size: 0.875rem;
+  color: var(--text, #111827);
+  opacity: 0.7;
+}
+
+.history-result {
+  margin: 8px 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.result-draw {
+  color: var(--text, #111827);
+  opacity: 0.8;
+}
+
+.result-winner {
+  color: var(--primary, #2563EB);
+}
+
+.result-X {
+  color: var(--primary, #2563EB);
+}
+
+.result-O {
+  color: var(--secondary, #F59E0B);
+}
+
+.history-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--background, #f9fafb);
+  font-size: 0.875rem;
+  color: var(--text, #111827);
+  opacity: 0.8;
+}
+
+.move-count {
+  font-weight: 500;
+}
+
+.game-mode {
+  font-weight: 500;
+  padding: 4px 8px;
+  background: var(--background, #f9fafb);
+  border-radius: 4px;
+}
+
+/* Scrollbar styling */
+.history-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.history-list::-webkit-scrollbar-track {
+  background: var(--background, #f9fafb);
+  border-radius: 4px;
+}
+
+.history-list::-webkit-scrollbar-thumb {
+  background: var(--primary, #2563EB);
+  border-radius: 4px;
+}
+
+.history-list::-webkit-scrollbar-thumb:hover {
+  background: #1d4ed8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .game-history {
+    padding: 0 16px;
+  }
+
+  .history-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .game-date {
+    font-size: 0.75rem;
+  }
+}
